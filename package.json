@@ -1,0 +1,32 @@
+{
+  "name": "demyst-coding-assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "test": "jest --testPathPattern='./test/*.js'",
+  "test:coverage": "jest --coverage && open coverage/lcov-report/index.html || xdg-open coverage/lcov-report/index.html",
+  "test:updateSnapshot": "jest --updateSnapshot",
+  "jest": {
+    "verbose": true,
+    "testMatch": [
+      "<rootDir>/test/**/*.{js,jsx,ts,tsx}",
+      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/jspm_packages"
+    ]
+  },
+  "scripts": {
+    "start" :"node src/index.js",
+    "test": "npx jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.8"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
